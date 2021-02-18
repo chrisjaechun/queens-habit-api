@@ -7,6 +7,7 @@ class Experience(models.Model):
   notes = models.CharField(max_length=250)
   owner = models.ForeignKey(
     get_user_model(),
+    related_name='experiences',
     on_delete=models.CASCADE
   )
 
@@ -19,5 +20,5 @@ class Experience(models.Model):
       'id': self.id,
       'what': self.what,
       'where': self.where,
-      'notes': self.notes
+      'notes': self.notes,
     }
