@@ -20,7 +20,7 @@ class ExperiencesAll(generics.ListCreateAPIView):
 class Experiences(generics.ListCreateAPIView):
     def get(self, request):
         """Index request"""
-        experiences = Experience.objects.all()
+        experiences = Experience.objects.all().filter(owner=request.user.id)
         data = ExperienceSerializer(experiences, many=True).data
         return Response(data)
 
