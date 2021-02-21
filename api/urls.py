@@ -5,7 +5,7 @@ from .views.user_views import SignUp, SignIn, SignOut, ChangePassword
 
 urlpatterns = [
   	# Restful routing
-    path('experiences/all/', ExperiencesAll.as_view(), name='experiences_all'),
+    path('experiences-all/', ExperiencesAll.as_view(), name='experiences_all'),
     path('experiences/', Experiences.as_view(), name='experiences'),
     path('experiences/<int:pk>/', ExperienceDetail.as_view(), name='experience_detail'),
     

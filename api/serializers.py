@@ -52,3 +52,6 @@ class ExperienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Experience
         fields = ('id', 'what', 'where', 'notes', 'owner')
+
+class ExperienceReadSerializer(ExperienceSerializer):
+    owner = serializers.StringRelatedField()

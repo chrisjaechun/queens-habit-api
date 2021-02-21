@@ -8,13 +8,13 @@ from django.contrib.auth import get_user, authenticate, login, logout
 from django.middleware.csrf import get_token
 
 from ..models.experience import Experience
-from ..serializers import UserSerializer, ExperienceSerializer
+from ..serializers import UserSerializer, ExperienceSerializer, ExperienceReadSerializer
 
 class ExperiencesAll(generics.ListCreateAPIView):
     def get(self, request):
         """Index all request"""
         experiences = Experience.objects.all()
-        data = ExperienceSerializer(experiences, many=True).data
+        data = ExperienceReadSerializer(experiences, many=True).data
         return Response(data)
 
 class Experiences(generics.ListCreateAPIView):

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:8000/experiences/all/" \
+curl "http://localhost:8000/experiences-all/" \
   --include \
   --request GET \
   --header "Authorization: Token ${TOKEN}"
