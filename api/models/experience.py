@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 class Experience(models.Model):
   what = models.CharField(max_length=100)
   where = models.CharField(max_length=100)
-  notes = models.CharField(max_length=250)
+  notes = models.CharField(max_length=500)
   owner = models.ForeignKey(
     get_user_model(),
     related_name='experiences',
