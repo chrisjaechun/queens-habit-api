@@ -14,8 +14,8 @@ The API for the Queens Habit application. This will allow users to sign-up, sign
 1. Fork and clone this repository.
 2. Change into the new directory.
 3. Create and checkout to a new branch.
-4. Run `pipenv shell` to start up your cirutal environment.
-5. Run `pipenv shell` to install dependencies.
+4. Run `pipenv shell` to start up your virutal environment.
+5. Run `pipenv install` to install dependencies.
 6. Create a psql database for the project.
     1. Type `psql` or `psql -U postgres` to get into interactive shell
     2. Run `CREATE DATABASE "queens-habit";`
